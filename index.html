@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Event Scheduler</title>
+  <link rel="stylesheet" href="style.css" />
+
+</head>
+<body>
+  <header>
+    <h1>Event Scheduler</h1>
+    <button id="biometricBtn">Biometric Login</button>
+  </header>
+
+  <main>
+    <!-- Event Form -->
+    <section id="event-form-section">
+      <h2>Add / Edit Event</h2>
+      <form id="eventForm">
+        <input type="hidden" id="eventId" value="" />
+        <label for="title">Event Title:</label>
+        <input type="text" id="title" name="title" required />
+
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date" required />
+
+        <label for="time">Time:</label>
+        <input type="time" id="time" name="time" required />
+
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location" required />
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea>
+
+        <button type="submit">Save Event</button>
+      </form>
+      <div id="formFeedback" role="alert"></div>
+    </section>
+
+    <!-- Event List -->
+    <section id="event-list-section">
+      <h2>Your Events</h2>
+      <ul id="eventList"></ul>
+    </section>
+
+    <!-- AI Chatbot Interface -->
+    <section id="chatbot-section">
+      <h2>Chat with AI Assistant</h2>
+      <div id="chat-history"></div>
+      <input type="text" id="chat-input" placeholder="Ask a question???" aria-label="Chat input" />
+      <button id="send-btn">Send</button>
+    </section>
+  </main>
+
+  <!-- Load our main script as a module -->
+  <script type="module" src="script.js"></script>
+</body>
+</html>
